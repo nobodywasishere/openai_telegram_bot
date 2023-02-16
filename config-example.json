@@ -1,0 +1,5 @@
+{
+    "TELEGRAM_BOT_KEY": "",
+    "OPENAI_API_KEY": "",
+    "ALLOWED_USERS": "" // Comma separated list of user IDs to allow to use the bot, leave empty for any user
+}

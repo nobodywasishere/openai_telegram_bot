@@ -1,0 +1,20 @@
+name: openai_telegram_bot
+version: 0.1.0
+
+authors:
+  - Margret Riegert <margret@eowyn.net>
+
+targets:
+  openai_telegram_bot:
+    main: src/openai_telegram_bot.cr
+
+dependencies:
+  tourmaline:
+    github: protoncr/tourmaline
+    branch: master
+  openai:
+    github: sferik/openai-crystal
+
+crystal: 1.7.2
+
+license: MIT

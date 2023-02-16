@@ -1,0 +1,30 @@
+version: 2.0
+shards:
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.11.0
+
+  fnv:
+    git: https://github.com/naqvis/crystal-fnv.git
+    version: 0.1.3
+
+  html5:
+    git: https://github.com/naqvis/crystal-html5.git
+    version: 0.4.0
+
+  http_proxy:
+    git: https://github.com/mamantoha/http_proxy.git
+    version: 0.10.1+git.commit.64ef48be6c71ef1b8b7d1b423b1b09b80cd17425
+
+  openai:
+    git: https://github.com/sferik/openai-crystal.git
+    version: 0.2.0+git.commit.d5c7849a36e29235008bfa4ae0e6205be5ad68b9
+
+  tourmaline:
+    git: https://github.com/protoncr/tourmaline.git
+    version: 0.27.0+git.commit.194e3eeae7280cccafec91ae73c18b9d68438e0a
+
+  xpath2:
+    git: https://github.com/naqvis/crystal-xpath2.git
+    version: 0.1.3
+
