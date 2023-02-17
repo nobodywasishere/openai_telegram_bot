@@ -35,21 +35,23 @@ class EchoBot < Tourmaline::Client
   def on_message(update)
     return unless message = update.message
 
-    puts "Message recieved: #{message.text}"
+    puts "#{message.message_id}: Message recieved: #{message.text}"
 
     from = message.from
     if from.nil?
-      puts "No user id"
+      puts "#{message.message_id}: No user id"
       return
     elsif message.text.nil?
-      puts "Empty message"
+      puts "#{message.message_id}: Empty message"
       return
     elsif !user_allowed?(from)
-      puts "User not allowed: #{from.first_name} (#{from.id})"
+      puts "#{message.message_id}: User not allowed: #{from.first_name} (#{from.id})"
       return
     end
 
-    message.reply(get_ai_resp(message.text))
+    ai_response = get_ai_resp(message.text)
+    puts "#{message.message_id}: Message reply: #{ai_response}"
+    message.reply(ai_response, parse_mode: ParseMode::HTML)
   end
 end
 
