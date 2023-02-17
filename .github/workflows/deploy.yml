@@ -18,5 +18,5 @@ jobs:
         script: |
           cd ~/dev/openai_telegram_bot/
           git pull
-          shards build
+          shards build --release
           systemctl --user restart openai_telegram_bot
