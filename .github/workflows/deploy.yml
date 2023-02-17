@@ -16,4 +16,4 @@ jobs:
           cd ~/dev/openai_telegram_bot/
           git pull
           shards build
-          systemctl --user restart openai-telegram-bot
+          systemctl --user restart openai_telegram_bot
