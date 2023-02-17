@@ -26,7 +26,7 @@ class EchoBot < Tourmaline::Client
   end
 
   private def get_ai_resp(message : String | Nil) : String
-    resp = @openai.try &.completions(prompt: message, max_tokens: 100).choices.first.text
+    resp = @openai.try &.completions(prompt: message).choices.first.text
     return resp unless resp.nil?
     return "OpenAI is not working."
   end
