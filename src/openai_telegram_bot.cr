@@ -1,10 +1,17 @@
 require "tourmaline"
 require "openai"
+require "option_parser"
 require "json"
 
 puts "Starting openai_telegram_bot..."
 
-keys = Hash(String, String).from_json(File.read("config.json"))
+config_file = "config.json"
+
+OptionParser.parse do |parser|
+  parser.on("-c config.json", "--config=config.json", "Specifies the config file") { |name| config_file = name }
+end
+
+keys = Hash(String, String).from_json(File.read(config_file))
 
 class EchoBot < Tourmaline::Client
   setter allowed_users : Array(String) = [] of String
