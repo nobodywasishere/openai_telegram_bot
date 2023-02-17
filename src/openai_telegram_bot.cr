@@ -57,5 +57,5 @@ end
 
 bot = EchoBot.new(bot_token: keys["TELEGRAM_BOT_KEY"])
 bot.allowed_users = keys["ALLOWED_USERS"].split(",") if keys.keys.includes? "ALLOWED_USERS"
-bot.openai = OpenAI::Client.new(api_key: keys["OPENAI_API_KEY"], default_engine: "ada")
+bot.openai = OpenAI::Client.new(api_key: keys["OPENAI_API_KEY"], default_engine: "code-davinci-002") # used to be "ada"
 bot.poll
